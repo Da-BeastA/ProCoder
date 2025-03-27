@@ -1,0 +1,57 @@
+**Comparison of LLMs and Benchmarking Justification**
+
+### **1. Introduction**
+
+Large Language Models (LLMs) have distinct capabilities depending on their architecture, training data, and intended use case. Evaluating them through benchmarking is crucial for selecting the right model for specific tasks like interaction, code generation, or reasoning. This document analyzes OpenAI models, CodeLlama, and Mistral 7B based on practical considerations.
+
+### **2. Benchmarking Metrics**
+
+- **Perplexity (PPL):** Measures how well a model predicts a given sequence. Lower is better.
+- **BLEU (Bilingual Evaluation Understudy):** Used for translation tasks to compare generated text against reference text.
+- **Accuracy/F1 Score:** Evaluates correctness in classification and reasoning.
+- **Code-Specific Metrics:** HumanEval, MBPP (MultiPL-E) for evaluating coding capabilities.
+
+---
+
+### **3. Model Comparison**
+
+#### **3.1 OpenAI Models (GPT-4, GPT-3.5)**
+
+- **Reason for Not Using:**
+  - Paid and requires API access, which may not be feasible for certain projects.
+  - High cost for frequent queries, making it impractical for development and real-time applications.
+  - Excellent at reasoning, interaction, and general knowledge, but the pricing limits usability.
+
+#### **3.2 CodeLlama (7B, 13B, 34B)**
+
+- **Strengths:**
+  - Optimized for code generation and completion.
+  - Pretrained on large codebases, making it highly efficient in syntax and logic corrections.
+  - Benchmarked using HumanEval and MBPP, performing well in structured coding environments.
+- **Reason for Not Using for Interaction:**
+  - Limited conversational ability; lacks training on general human interactions.
+  - Designed for code-focused applications rather than natural language dialogue.
+
+#### **3.3 Mistral 7B**
+
+- **Strengths:**
+  - Open-source, allowing customization without API costs.
+  - Handles general conversation and reasoning better than CodeLlama.
+  - Strong multilingual capabilities and efficient fine-tuning.
+- **Why Avoid Quantized Models?**
+  - Quantized versions (e.g., Mistral 7B Q4) reduce memory usage but sacrifice accuracy and reasoning ability.
+  - Lower precision models may struggle with complex interactions or detailed responses.
+
+---
+
+### **4. Conclusion**
+
+Based on benchmarks and practical considerations:
+
+- **OpenAI models are excellent but costly.**
+- **CodeLlama is ideal for coding but lacks conversational depth.**
+- **Mistral 7B is the best balance for interaction and general-purpose reasoning.**
+- **Avoid quantized models when precision and reasoning depth are critical.**
+
+By aligning benchmarking with real-world application needs, Mistral 7B emerges as the optimal choice for interactive AI development.
+

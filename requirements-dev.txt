@@ -1,0 +1,4 @@
+pytest
+black  # Code formatting
+isort  # Import sorting
+mypy   # Type checking

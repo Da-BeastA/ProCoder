@@ -1,21 +1,11 @@
 ProCoder/
-│── backend/                # Backend logic & LLM integration
-│   ├── models/             # Model loading & inference scripts
-│   ├── processing/         # Code analysis & debugging logic
-│   ├── api/                # Backend API (if using Flask/FastAPI)
-│   ├── utils/              # Helper functions (e.g., formatters, preprocessors)
-│   └── main.py             # Main backend script
-│
-│── frontend/               # UI implementation (Streamlit or Web-based)
-│   ├── components/         # UI elements (buttons, text boxes, etc.)
-│   ├── styles/             # CSS or styling files
-│   ├── app.py              # Streamlit-based interface
-│
-│── data/                   # Sample data, test cases
-│── tests/                  # Unit tests
-│── config/                 # Config files (API keys, environment variables)
-│── requirements.txt        # Dependencies for Python
-│── README.md               # Project documentation
-│── setup.sh                # Environment setup script
-│── .env                    # Sensitive variables (e.g., API keys, model paths)
-
+│── backend/
+│   ├── api/
+│   │   ├── server.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── ollama_client.py
+│── frontend/
+│── main.py
+│── requirements.txt
+|── requirements-dev.txt
